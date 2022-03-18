@@ -33,7 +33,7 @@ public class BasePage {
 
     private void initWebDriver() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "/Users/olgapetruseva/IdeaProjects/testUi/src/test/resources/resources/webdrivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/resources/webdrivers/chromedriver");
             driver = new ChromeDriver();
         }
     }
