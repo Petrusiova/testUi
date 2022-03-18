@@ -23,8 +23,7 @@ public class PostsPage extends BasePage {
 
     ChromeDriver chromeDriver = BasePage.getChromeDriver();
 
-
-    @Step("Кликнуть на предложение")
+    @Step("Click the result")
     public void clickItem(int item){
         Assertions.assertNotNull( postList,"No posts on the page");
         try {
@@ -36,7 +35,7 @@ public class PostsPage extends BasePage {
 
     }
 
-    @Step("Добавить несколько элементов в избранное")
+    @Step("Add several elements to favourites")
     public int saveToFavouritesBulk() throws AWTException {
         Assertions.assertNotNull( postList, "No posts on the page");
         int size = postList.size();
@@ -46,7 +45,7 @@ public class PostsPage extends BasePage {
         return size;
     }
 
-    @Step("Удалить все элементы из избранного")
+    @Step("Delete all from favourites")
     public void deleteFromFavouritesBulk() throws AWTException {
         var size = saveToFavouritesBulk();
 
@@ -62,7 +61,7 @@ public class PostsPage extends BasePage {
         checkFavourites(0);
     }
 
-    @Step("Сохранить в избранное")
+    @Step("Save to favourites")
     public void saveToFavourites() throws AWTException {
         Assertions.assertNotNull(postList, "No posts on the page");
         WebElement post = chromeDriver.findElement(By.xpath("//*[@id=\"posts\"]/tbody/tr[1]"));
@@ -74,6 +73,7 @@ public class PostsPage extends BasePage {
         
     }
 
+    @Step("Delete from favourites")
     public void deleteFromFavourites() throws AWTException {
         saveToFavourites();
         WebElement post = chromeDriver.findElement(By.xpath("//*[@id=\"posts\"]/tbody/tr[1]"));
@@ -91,7 +91,7 @@ public class PostsPage extends BasePage {
         clickElement(heart);
     }
 
-    @Step("Навести мышкой на предложение и нажать на сердечко")
+    @Step("Move mouse to the element and press 'heart' button")
     private void addMethod(int size, ChromeDriver chromeDriver, Actions actions) throws AWTException {
         for (int i = 1; i <= size; i++) {
             WebElement post = chromeDriver.findElement(By.xpath("//*[@id=\"posts\"]/tbody/tr[" + i + "]"));

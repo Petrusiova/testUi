@@ -20,7 +20,7 @@ public class MainPage extends BasePage {
         getChromeDriver().get(MAIN_PAGE_URL);
     }
 
-    @Step("Выбор произвольной категории")
+    @Step("Choice o random category")
     public void chooseCategory(){
         checkExpectedUrl(MAIN_PAGE_URL);
         Assertions.assertNotNull(categoriesList,"No categories on page");

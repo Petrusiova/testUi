@@ -1,38 +1,47 @@
-Вместо Cucumber использовала отчет аллюр для более красивого представления
-Запустить тесты можно выкачав проект и нажав соответствующие кнопки запуска
+Here is the project for the test task (task.txt)
 
-Сценарии разделила на 3 группы в зависимости от типа добавления в избранное:
-- в расширенном поиске
-- через добавление "сердечками" при поиске предложений
-- с помощью кнопки добавления внизу страницы с предложением
+I decided to use Allure instead of Cucumber for for informative and pretty view
+To run tests please clone the project and press the buttons (see the screenshot below)
 
-Каждый сценарий содержит по 4 кейса:
-- одно добавление
-- одно добавление и удаление
-- массовое добавление
-- массовое добавление и удаление
+![alt text](5.png)
 
-Чтобы посмотреть аллюр-отчет достаточно запустить AllureServe (см скриншот)
+I've divided the task to 3 scenarios depending on type og adding to favourites:
 
-В проекте использовала Java, Junit5, Allure, Gradle, Chromdriver для Chrome(99.0.4844.74)
-Ниже прилагаю скриншоты отчетов Allure
+- via wide search
+- via clicking the 'heart' button
+- via clicking the 'add to favourites' button
 
-1 ТК подробно: 
+Each scenario contains 4 cases:
+- 1 simple adding
+- 1 adding and deleting
+- bulk adding
+- bulk adding and deleting
+
+Running a scenario:
+
+![alt text](5.png)
+
+After running a test/group of tests you can generate report (automatically). 
+Run AllureServe to look through the results (screenshot below)
+
+![alt text](6.png)
+
+I used Java, Junit5, Allure, Gradle, Chromdriver for browser Chrome(99.0.4844.74)
+
+If you do not have an opportunity to run tests and results look at the screenshots:
+
+1 case in detail: 
 
 ![alt text](1.png)
 
-1 сценарий подробно:
+All scenarios briefly:
 
 ![alt text](2.png)
 
-Все сценарии кратко: 
 
 ![alt text](3.png)
 
-Все сценарии подробно:
+All scenarios in detail: :
 
 ![alt text](4.png)
 
-Запуск отчета: 
-
-![alt text](5.png)

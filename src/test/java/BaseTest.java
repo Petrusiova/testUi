@@ -10,7 +10,7 @@ import pages.MainPage;
 
 public class BaseTest {
     @BeforeEach
-    @Step("Открываем стартовую страницу и выбираем произвольную категорию")
+    @Step("Open start page and choose random category")
     public void beforeScenario(){
         try {
             preparePostsList();
@@ -31,7 +31,7 @@ public class BaseTest {
     }
 
     @AfterEach
-    @Step("Закрыть браузер")
+    @Step("Close browser")
     public void finish() {
         new BasePage().afterScenario();
     }

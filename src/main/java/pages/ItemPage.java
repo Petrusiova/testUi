@@ -14,14 +14,14 @@ public class ItemPage extends BasePage{
     @FindBy(xpath = "//a[@onclick=\"return checkBackUrl()\"]")
     List<WebElement> back;
 
-    @Step("Нажать на кнопку добавления в избранное")
+    @Step("Click the 'add to favourites' button")
     public void addToFavs(int expectedFavsStart, int expectedFavsFinish) {
         checkFavourites(expectedFavsStart);
         favsLink.click();
         checkFavourites(expectedFavsFinish);
     }
 
-    @Step("Нажать на кнопку удаления из избранного")
+    @Step("Click the 'delete from favourites' button")
     public void deleteFromFavs(int start) {
         checkFavourites(start);
         favsLink.click();
@@ -30,7 +30,7 @@ public class ItemPage extends BasePage{
         checkFavourites(start);
     }
 
-    @Step("Вернуться на предыдущую страницу")
+    @Step("Back to the previous page")
     public void back(){
         back.get(0).click();
     }

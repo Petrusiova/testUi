@@ -10,7 +10,7 @@ public class SearchFormPage extends BasePage{
     @FindBy(name = "s_andlike_txt_bigtext")
     WebElement input;
 
-    @Step("Ввести {search} в поле поиска и нажать ENTER")
+    @Step("Enter {search} to input field and press ENTER")
     public void search(String search){
         input.click();
         input.clear();

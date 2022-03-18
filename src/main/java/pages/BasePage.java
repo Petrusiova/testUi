@@ -39,14 +39,14 @@ public class BasePage {
     }
 
     @AfterEach
-    @Step("Закрыть браузер")
+    @Step("Close browser")
     public void afterScenario() {
         driver.close();
         driver.quit();
         driver = null;
     }
 
-    @Step("Проверить url на соответствие ожидаемому: {expectedUrl}")
+    @Step("Check url equals to expected: {expectedUrl}")
     public static void checkExpectedUrl(String expectedUrl){
         Assertions.assertEquals(expectedUrl, driver.getCurrentUrl(), "Wrong page url");
     }
@@ -61,7 +61,7 @@ public class BasePage {
         elementsList.get(categoryNumber).click();
     }
 
-    @Step("Нажать на элемент")
+    @Step("Click the element")
     public void clickElement(WebElement element) {
         try {
             element.click();
@@ -72,7 +72,7 @@ public class BasePage {
         }
     }
 
-    @Step("Проверить количество предложений в избранном: {expected}")
+    @Step("Check results count in favourites: {expected}")
     public void checkFavourites(int expected) {
         int favorites_count = Integer.parseInt(getChromeDriver().findElement(By.id("favorites_count")).getText());
         Assertions.assertEquals(expected, favorites_count, "Actual favs count != expected");

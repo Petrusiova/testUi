@@ -5,11 +5,11 @@ import pages.*;
 
 import java.awt.*;
 
-@DisplayName("Сценарий: добавление в избранное из расширенного поиска, нажав на 'сердечко'")
+@DisplayName("Scenario: add to favourites from wide search via tapping the 'heart' button")
 public class WideSearchTest {
 
     @BeforeEach
-    @Step("Переходим в расширенный поиск и ищем 'авто'")
+    @Step("Open the wide search and input 'auto' (ru)")
     public void prepareWistViaWideSearch() {
         new MainPage();
         new CategoryPage().wideSearch();
@@ -17,25 +17,25 @@ public class WideSearchTest {
     }
 
     @Test
-    @DisplayName("Сохранить 1 предложение в избранное")
+    @DisplayName("Save 1 item to favourites")
     public void simpleAddTest() throws AWTException {
         new PostsPage().saveToFavourites();
     }
 
     @Test
-    @DisplayName("Сохранить 1 предложение в избранное и удалить из избранного")
+    @DisplayName("Save 1 item to favourites and delete from favourites")
     public void simpleDeleteFromFavs() throws AWTException {
         new PostsPage().deleteFromFavourites();
     }
 
     @Test
-    @DisplayName("Сохранить несколько предложений в избранное")
+    @DisplayName("Save several items to favourites")
     public void bulkAddToFavs() throws AWTException {
         new PostsPage().saveToFavouritesBulk();
     }
 
     @Test
-    @DisplayName("Сохранить несколько предложений в избранное и удалить из избранного")
+    @DisplayName("Save several items to favourites and delete all of them from favourites")
     public void bulkDeleteFromFavs() throws AWTException {
         new PostsPage().deleteFromFavouritesBulk();
     }

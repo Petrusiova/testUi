@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CategoryPage extends BasePage{
 
@@ -18,7 +17,7 @@ public class CategoryPage extends BasePage{
     @FindBy(xpath = "//a[contains(text(), 'Расширенный поиск')]")
     private WebElement wideSearch;
 
-    @Step("Выбрать произвольную категорию с более чем 1 предложением")
+    @Step("Choose random category with >= 1 result")
     public void chooseCategory(){
         Assertions.assertNotNull(categoryVariety, "No categories on page");
         if (categoryVariety.size() > 0) {
@@ -41,7 +40,7 @@ public class CategoryPage extends BasePage{
         }
     }
 
-    @Step("Нажать на кнопку 'Расширенный поиск'")
+    @Step("Click the 'wide search' button")
     public void wideSearch(){
         wideSearch.click();
     }
